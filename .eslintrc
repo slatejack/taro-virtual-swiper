@@ -44,6 +44,38 @@
       {
         "allowSingleLine": false
       }
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before",
+          },
+          {
+            "pattern": "@tarojs/**",
+            "group": "internal",
+            "position": "before",
+          },
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "before",
+          },
+        ],
+        "pathGroupsExcludedImportTypes": [],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object"
+        ]
+      }
     ]
   }
 }

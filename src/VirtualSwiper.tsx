@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect, useMemo, ReactNode } from 'react';
-import { View } from '@tarojs/components';
 import Taro from '@tarojs/taro';
+import { View } from '@tarojs/components';
 
 export interface VirtualSwiperItem {
   id: string | number
