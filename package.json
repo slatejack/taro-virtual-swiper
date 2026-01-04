@@ -16,7 +16,7 @@
   },
   "files": [
     "dist",
-    "src"
+    "src/VirtualSwiper.scss"
   ],
   "sideEffects": [
     "*.css",
