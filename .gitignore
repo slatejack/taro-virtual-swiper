@@ -1,0 +1,22 @@
+# Build output
+dist/
+
+# Taro
+deploy_versions/
+.temp/
+.rn_temp/
+
+# Dependencies
+node_modules/
+demo/node_modules/
+
+# OS
+.DS_Store
+
+# Cache
+.swc
+
+# Local
+*.local
+.idea
+.npmrc

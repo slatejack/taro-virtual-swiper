@@ -1,0 +1,112 @@
+{
+  "name": "taro-virtual-swiper",
+  "version": "1.0.0",
+  "description": "基于 Taro 的高性能虚拟 Swiper 组件，支持大数据量场景",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./style.css": "./dist/style.css",
+    "./style.scss": "./src/VirtualSwiper.scss"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "./dist/index.mjs",
+    "./dist/index.cjs"
+  ],
+  "keywords": [
+    "taro",
+    "swiper",
+    "virtual",
+    "react",
+    "miniprogram",
+    "weapp",
+    "component"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepare": "husky",
+    "demo:weapp": "cd demo && npm run dev:weapp",
+    "demo:h5": "cd demo && npm run dev:h5",
+    "demo:build:weapp": "cd demo && npm run build:weapp",
+    "demo:build:h5": "cd demo && npm run build:h5",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint --config .eslintrc --ext .jsx,.js,.ts,.tsx --fix"
+  },
+  "peerDependencies": {
+    "@tarojs/components": ">=3.0.0",
+    "@tarojs/taro": ">=3.0.0",
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.4",
+    "@babel/plugin-transform-class-properties": "7.25.9",
+    "@babel/preset-react": "^7.24.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@tarojs/cli": "4.1.9",
+    "@tarojs/components": "4.1.9",
+    "@tarojs/helper": "4.1.9",
+    "@tarojs/plugin-framework-react": "4.1.9",
+    "@tarojs/plugin-generator": "4.1.9",
+    "@tarojs/plugin-platform-alipay": "4.1.9",
+    "@tarojs/plugin-platform-h5": "4.1.9",
+    "@tarojs/plugin-platform-harmony-hybrid": "4.1.9",
+    "@tarojs/plugin-platform-jd": "4.1.9",
+    "@tarojs/plugin-platform-qq": "4.1.9",
+    "@tarojs/plugin-platform-swan": "4.1.9",
+    "@tarojs/plugin-platform-tt": "4.1.9",
+    "@tarojs/plugin-platform-weapp": "4.1.9",
+    "@tarojs/react": "4.1.9",
+    "@tarojs/runtime": "4.1.9",
+    "@tarojs/shared": "4.1.9",
+    "@tarojs/taro": "4.1.9",
+    "@tarojs/vite-runner": "4.1.9",
+    "@types/minimatch": "^5",
+    "@types/react": "^18.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "babel-preset-taro": "4.1.9",
+    "eslint": "^8.57.0",
+    "eslint-config-taro": "4.1.9",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "postcss": "^8.5.6",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-refresh": "^0.14.0",
+    "sass": "^1.75.0",
+    "stylelint": "^16.4.0",
+    "stylelint-config-standard": "^38.0.0",
+    "terser": "^5.30.4",
+    "typescript": "^5.4.5",
+    "vite": "^4.2.0",
+    "vite-plugin-dts": "^3.9.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.4"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "npm run lint"
+    ]
+  }
+}

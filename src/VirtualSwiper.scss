@@ -1,0 +1,21 @@
+.virtual-swiper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    will-change: transform;
+  }
+
+  &__placeholder {
+    flex-shrink: 0;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    box-sizing: border-box;
+  }
+}
