@@ -47,7 +47,7 @@ yarn add taro-virtual-swiper
 
 ```tsx
 import { VirtualSwiper } from 'taro-virtual-swiper';
-import 'taro-virtual-swiper/style.scss';
+import 'taro-virtual-swiper/style.css';
 
 const data = [
   { id: 1, title: 'Slide 1' },
@@ -72,7 +72,7 @@ function App() {
 ```tsx
 import { useState } from 'react';
 import { VirtualSwiper } from 'taro-virtual-swiper';
-import 'taro-virtual-swiper/style.scss';
+import 'taro-virtual-swiper/style.css';
 
 function App() {
   const [current, setCurrent] = useState(0);
