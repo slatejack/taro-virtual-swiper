@@ -16,7 +16,9 @@
   },
   "files": [
     "dist",
-    "src/VirtualSwiper.scss"
+    "package.json",
+    "LICENSE",
+    "README.md"
   ],
   "sideEffects": [
     "*.css",
