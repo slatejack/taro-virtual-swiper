@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/logo.svg" alt="taro-virtual-swiper" width="120" height="120">
+  <img src="https://raw.githubusercontent.com/slatejack/taro-virtual-swiper/master/docs/logo.svg" alt="taro-virtual-swiper" width="120" height="120">
 </p>
 
 <h1 align="center">taro-virtual-swiper</h1>
@@ -7,6 +7,13 @@
 <p align="center">
   基于 Taro 的高性能虚拟 Swiper 组件，专为大数据量场景设计
 </p>
+
+<div align="center">
+
+[![NPM](https://img.shields.io/npm/v/taro-virtual-swiper.svg)](https://www.npmjs.com/package/taro-virtual-swiper)
+[![NPM downloads](https://img.shields.io/npm/dm/taro-virtual-swiper.svg)](http://npmjs.com/package/taro-virtual-swiper)
+
+</div>
 
 <p align="center">
   <a href="#特性">特性</a> •
@@ -117,7 +124,7 @@ interface VirtualSwiperItem {
 数据列表: [1] [2] [3] [4] [5] ... [n]
                   ↓
 实际渲染:     [2] [3] [4]
-              prev curr next
+            prev curr next
 ```
 
 无论数据量多大，始终只渲染：
