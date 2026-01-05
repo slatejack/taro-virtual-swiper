@@ -1,0 +1,29 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [created] # 当创建一个新的 Release 时触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # 设置 npm 镜像源，这会自动在 .npmrc 中配置环境变量
+          registry-url: 'https://registry.npmjs.org'
+          # 开启 yarn 缓存（这是关键优化）
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn build
+
+      - name: Publish to npm
+        # Yarn 会读取 setup-node 自动生成的 .npmrc 配置文件
+        run: yarn publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
