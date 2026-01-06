@@ -11,7 +11,8 @@
       "require": "./dist/index.cjs",
       "types": "./dist/index.d.ts"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css",
+    "./style.scss": "./src/VirtualSwiper.scss"
   },
   "files": [
     "dist",
