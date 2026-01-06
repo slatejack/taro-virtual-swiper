@@ -1,6 +1,6 @@
 {
   "name": "taro-virtual-swiper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于 Taro 的高性能虚拟 Swiper 组件，支持大数据量场景",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
