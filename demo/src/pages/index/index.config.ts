@@ -1,4 +1,3 @@
 export default definePageConfig({
-  disableScroll: true,
-  navigationBarTitleText: '首页'
+  navigationBarTitleText: '首页',
 });

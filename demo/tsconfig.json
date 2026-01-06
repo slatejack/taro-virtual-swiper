@@ -18,15 +18,13 @@
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
-      "node_modules/@types",
-      "../node_modules/@types"
+      "node_modules/@types"
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "taro-virtual-swiper": ["../src/index.ts"]
-    },
-    "baseUrl": "."
+      // TS5090 leading './'
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["./src", "./config", "../types"],
+  "include": ["./src", "./types", "./config"],
   "compileOnSave": false
 }

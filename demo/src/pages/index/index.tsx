@@ -1,12 +1,12 @@
-import React, { useState, useMemo } from 'react';
-import { View, Text, Image } from '@tarojs/components';
+import { useMemo, useState } from 'react';
 import VirtualSwiper, { VirtualSwiperItem } from 'taro-virtual-swiper';
+import { Image, Text, View } from '@tarojs/components';
 import './index.scss';
 
 interface ImageItem extends VirtualSwiperItem {
-  id: number
-  url: string
-  title: string
+  id: number;
+  url: string;
+  title: string;
 }
 
 // 生成大量测试数据
@@ -14,14 +14,14 @@ function generateMockData(count: number): ImageItem[] {
   const colors = [
     '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7',
     '#DDA0DD', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E9',
-    '#F8B500', '#00CED1', '#FF69B4', '#32CD32', '#FFD700'
+    '#F8B500', '#00CED1', '#FF69B4', '#32CD32', '#FFD700',
   ];
 
   return Array.from({ length: count }, (_, index) => ({
     id: index,
     url: `https://picsum.photos/seed/${index}/400/300`,
     title: `图片 ${index + 1}`,
-    color: colors[index % colors.length]
+    color: colors[index % colors.length],
   }));
 }
 
@@ -53,7 +53,7 @@ export default function Index() {
           itemWidth={750}
           threshold={0.15}
           duration={300}
-          renderItem={(item, index) => (
+          renderItem={(item) => (
             <View
               className="swiper-item"
             >

@@ -2,7 +2,7 @@
   "name": "taro-virtual-swiper-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "taro-virtual-swiper 演示项目",
+  "description": "",
   "templateInfo": {
     "name": "default",
     "typescript": true,
@@ -10,6 +10,8 @@
     "framework": "React"
   },
   "scripts": {
+    "prepare": "husky",
+    "new": "taro new",
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
     "build:alipay": "taro build --type alipay",
@@ -27,7 +29,8 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
-    "dev:harmony-hybrid": "npm run build:harmony-hybrid -- --watch"
+    "dev:harmony-hybrid": "npm run build:harmony-hybrid -- --watch",
+    "lint": "eslint --config ../.eslintrc --ext .jsx,.js,.ts,.tsx --fix"
   },
   "browserslist": [
     "defaults and fully supports es6-module",
@@ -52,14 +55,19 @@
     "@tarojs/shared": "4.1.9",
     "@tarojs/taro": "4.1.9",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "taro-virtual-swiper": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",
     "@babel/plugin-transform-class-properties": "7.25.9",
     "@babel/preset-react": "^7.24.1",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@tarojs/cli": "4.1.9",
+    "@tarojs/plugin-generator": "4.1.9",
     "@tarojs/vite-runner": "4.1.9",
+    "@types/minimatch": "^5",
     "@types/react": "^18.0.0",
     "@vitejs/plugin-react": "^4.3.0",
     "babel-preset-taro": "4.1.9",
@@ -67,10 +75,13 @@
     "eslint-config-taro": "4.1.9",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "postcss": "^8.5.6",
     "react-refresh": "^0.14.0",
     "sass": "^1.75.0",
     "stylelint": "^16.4.0",
+    "stylelint-config-standard": "^38.0.0",
     "terser": "^5.30.4",
     "typescript": "^5.4.5",
     "vite": "^4.2.0"

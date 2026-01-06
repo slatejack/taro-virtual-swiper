@@ -1,8 +1,8 @@
 {
   "libVersion": "3.13.1",
-  "projectname": "virtual-swiper-1",
+  "projectname": "taro-virtual-swiper-demo",
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "coverView": false,
     "lazyloadPlaceholderEnable": false,
     "skylineRenderEnable": false,

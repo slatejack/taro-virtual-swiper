@@ -1,12 +1,12 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "virtual-swiper-demo",
-  "description": "基于 Taro 的虚拟 Swiper 组件",
+  "projectname": "taro-virtual-swiper-demo",
+  "description": "",
   "appid": "",
   "setting": {
     "urlCheck": true,
-    "es6": true,
-    "enhance": true,
+    "es6": false,
+    "enhance": false,
     "compileHotReLoad": false,
     "postcss": false,
     "minified": false,
