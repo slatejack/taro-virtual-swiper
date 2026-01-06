@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2026-01-06
+
+### ✨ 新增
+
+- 新增 `style.scss` 导出入口，支持直接引入 SCSS 源文件进行样式定制
+
+---
+
 ## [1.0.1] - 2026-01-06
 
 ### 🔧 维护
