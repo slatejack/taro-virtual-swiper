@@ -1,37 +1,38 @@
-import React, { useState, useRef, useCallback, useEffect, useMemo, ReactNode } from 'react';
+import React, { ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Taro from '@tarojs/taro';
 import { View } from '@tarojs/components';
 
 export interface VirtualSwiperItem {
-  id: string | number
-  [key: string]: any
+  id: string | number;
+
+  [key: string]: any;
 }
 
 export interface VirtualSwiperProps<T extends VirtualSwiperItem> {
   /** 数据列表 */
-  list: T[]
+  list: T[];
   /** 当前索引 */
-  current?: number
+  current?: number;
   /** 默认索引 */
-  defaultCurrent?: number
+  defaultCurrent?: number;
   /** 每项宽度，单位 rpx，默认 750 */
-  itemWidth?: number
+  itemWidth?: number;
   /** 切换阈值比例，默认 0.1 (10%) */
-  threshold?: number
+  threshold?: number;
   /** 阻尼系数，默认 1 */
-  damping?: number
+  damping?: number;
   /** 边缘阻尼系数，默认 0.3 */
-  edgeDamping?: number
+  edgeDamping?: number;
   /** 过渡动画时长，单位 ms，默认 300 */
-  duration?: number
+  duration?: number;
   /** 切换回调 */
-  onChange?: (current: number, item: T) => void
+  onChange?: (current: number, item: T) => void;
   /** 渲染每一项 */
-  renderItem: (item: T, index: number) => ReactNode
+  renderItem: (item: T, index: number) => ReactNode;
   /** 自定义类名 */
-  className?: string
+  className?: string;
   /** 自定义样式 */
-  style?: React.CSSProperties
+  style?: React.CSSProperties;
 }
 
 /**
@@ -40,7 +41,7 @@ export interface VirtualSwiperProps<T extends VirtualSwiperItem> {
  */
 function getRenderItems<T extends VirtualSwiperItem>(
   current: number,
-  list: T[]
+  list: T[],
 ): { items: (T & { originalIndex: number })[]; minIndex: number } {
   if (list.length === 0) {
     return { items: [], minIndex: 0 };
@@ -51,7 +52,7 @@ function getRenderItems<T extends VirtualSwiperItem>(
 
   const items = list.slice(minIndex, maxIndex + 1).map((item, idx) => ({
     ...item,
-    originalIndex: minIndex + idx
+    originalIndex: minIndex + idx,
   }));
 
   return { items, minIndex };
@@ -74,7 +75,7 @@ function VirtualSwiper<T extends VirtualSwiperItem>(props: VirtualSwiperProps<T>
     onChange,
     renderItem,
     className = '',
-    style
+    style,
   } = props;
 
   // 是否受控模式
@@ -129,7 +130,7 @@ function VirtualSwiper<T extends VirtualSwiperItem>(props: VirtualSwiperProps<T>
   // 获取渲染项
   const { items: renderItems, minIndex } = useMemo(
     () => getRenderItems(currentIndex, list),
-    [currentIndex, list]
+    [currentIndex, list],
   );
 
   // 占位宽度（用于定位）
@@ -237,7 +238,7 @@ function VirtualSwiper<T extends VirtualSwiperItem>(props: VirtualSwiperProps<T>
   // 动态样式
   const containerStyle: React.CSSProperties = useMemo(() => ({
     transform: `translateX(${containerTranslateX}px)`,
-    transition: isDragging || initializing ? 'none' : `transform ${duration}ms ease-out`
+    transition: isDragging || initializing ? 'none' : `transform ${duration}ms ease-out`,
   }), [containerTranslateX, duration, initializing, isDragging]);
 
   return (
