@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2026-01-06
+
+### 🔧 修复
+
+- 将 `src/VirtualSwiper.scss` 添加到发布文件列表，确保 SCSS 源文件正确包含在 npm 包中
+
+---
+
 ## [1.0.2] - 2026-01-06
 
 ### ✨ 新增
